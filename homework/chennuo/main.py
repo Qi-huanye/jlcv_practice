@@ -6,9 +6,9 @@ import cv2
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-VIDEO = os.path.join(HERE, "input", "homework.mp4")
+VIDEO = os.path.abspath(os.path.join(HERE, "..", "..", "homework.mp4"))
 OUT_DIR = os.path.join(HERE, "out")
-OUT = os.path.join(OUT_DIR, "green_ball_gui.mp4")
+OUT = os.path.join(HERE, "result.mp4")
 WIN_TITLE = "Green Ball Tracking"   # 窗口标题
 WIN_SIZE = (960, 540)               # 窗口初始大小（原片 1280x720，缩一半更好摆）
 

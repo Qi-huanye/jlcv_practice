@@ -7,10 +7,10 @@ from pathlib import Path
 
 # ============ 参数配置 ============
 # 视频输入路径，如果是摄像头请填 0
-VIDEO_PATH = "green_ball.mp4"  
-# 输出保存路径：~/桌面/cao/output_video.mp4
-DESKTOP_PATH = Path.home() / "Desktop" / "cao"
-OUTPUT_PATH = str(DESKTOP_PATH / "output_video.mp4")
+VIDEO_PATH = str(Path(__file__).resolve().parents[2] / "homework.mp4")
+# 输出保存在自己的作业目录
+DESKTOP_PATH = Path(__file__).resolve().parent
+OUTPUT_PATH = str(DESKTOP_PATH / "result.mp4")
 
 # HSV绿色范围（根据截图，绿球是高饱和度的翠绿色）
 LOWER_GREEN = np.array([40, 80, 80])
